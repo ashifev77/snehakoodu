@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 export default function Header(){
+  const location = useLocation()
   const [open, setOpen] = useState(false)
   const toggle = () => setOpen(v => !v)
   const close = () => setOpen(false)
@@ -46,20 +48,51 @@ export default function Header(){
       </div>
       <div className="navbar">
         <div className="container row">
-          <a className="logo" href="#">
+          <Link className="logo" to="/">
             <img src="/logo-snehakoodu.png" alt="Snehakoodu Abhayamandiram" />
-          </a>
+          </Link>
           <button className={`menu-toggle ${open ? 'open' : ''}`} aria-label="Toggle menu" aria-expanded={open} onClick={toggle}>
             <span></span><span></span><span></span>
           </button>
           <nav className={`nav ${open ? 'open' : ''}`}>
             <button className="close-nav" onClick={close} aria-label="Close menu">×</button>
-            <a href="#" onClick={close}>Home</a>
-            <a href="#about" onClick={close}>About</a>
-            <a href="#causes" onClick={close}>Donations</a>
-            <a href="#" onClick={close}>Pages</a>
-            <a href="#" onClick={close}>Blog</a>
-            <a href="#contact" onClick={close}>Contact</a>
+            <Link to="/" onClick={close}>Home</Link>
+            <Link to="/about" onClick={close}>About</Link>
+            <div className="nav-item">
+              <Link to="/projects">
+                Projects
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" style={{marginLeft: '4px'}}>
+                  <path d="M6 9L1 4h10z"/>
+                </svg>
+              </Link>
+              <div className="dropdown-menu">
+                <Link to="/projects/snehaveedu" onClick={close}>Snehaveedu</Link>
+                <Link to="/projects/snehadisha" onClick={close}>Snehadisha</Link>
+                <Link to="/projects/snehasena" onClick={close}>Snehasena</Link>
+                <Link to="/projects/snehapadam" onClick={close}>Snehapadam</Link>
+                <Link to="/projects/snehasanthwanam" onClick={close}>Snehasanthwanam</Link>
+                <Link to="/projects/snehavandi" onClick={close}>Snehavandi</Link>
+                <Link to="/projects/snehamangalyam" onClick={close}>Snehamangalyam</Link>
+                <Link to="/projects/snehanam" onClick={close}>Snehanam</Link>
+                <Link to="/projects/snehapuniyam" onClick={close}>Snehapuniyam</Link>
+              </div>
+            </div>
+            <div className="nav-item">
+              <Link to="/gallery/photos">
+                Gallery
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" style={{marginLeft: '4px'}}>
+                  <path d="M6 9L1 4h10z"/>
+                </svg>
+              </Link>
+              <div className="dropdown-menu">
+                <Link to="/gallery/certificates" onClick={close}>Certificates</Link>
+                <Link to="/gallery/awards" onClick={close}>Awards</Link>
+                <Link to="/gallery/photos" onClick={close}>Photos</Link>
+                <Link to="/gallery/articles" onClick={close}>Articles</Link>
+              </div>
+            </div>
+            <Link to="/media" onClick={close}>Media</Link>
+            <Link to="/contact" onClick={close}>Contact</Link>
             <div className="nav-cta">
               <a className="btn btn-primary full" href="#">Donate Now</a>
             </div>

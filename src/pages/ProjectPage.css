@@ -1,0 +1,480 @@
+/* Project Detail Page Styles */
+
+.project-detail-page {
+  padding-top: 0;
+}
+
+/* Hero Section */
+.project-detail-hero {
+  position: relative;
+  height: 350px;
+  background: linear-gradient(rgba(0, 51, 102, 0.75), rgba(0, 29, 59, 0.85)), url('/images/about/about-collage.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-detail-hero-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.project-detail-hero-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 56px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+
+.project-detail-hero-subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffd37c;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+/* Content Wrapper */
+.project-detail-content-wrapper {
+  padding: 80px 24px;
+}
+
+/* About Section */
+.project-about-section {
+  margin-bottom: 80px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.project-description {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.content-paragraph {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #4b5563;
+  margin: 0 0 24px;
+  text-align: justify;
+}
+
+/* Project Gallery Section */
+.project-gallery-section {
+  margin-bottom: 80px;
+  background: #fafafa;
+  padding: 60px 40px;
+  border-radius: 16px;
+}
+
+.gallery-grid-detail {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.gallery-item-detail {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(16, 24, 40, 0.1);
+}
+
+.gallery-item-detail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item-detail:hover img {
+  transform: scale(1.1);
+}
+
+/* Key Features Section */
+.project-features-section {
+  margin-bottom: 80px;
+}
+
+.features-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--ink);
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.feature-box {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(16, 24, 40, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid var(--brand-600);
+}
+
+.feature-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 50px rgba(16, 24, 40, 0.15);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  background: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-700) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon svg {
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+}
+
+.feature-box h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 16px;
+}
+
+.feature-box p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Impact Section (for Snehanam) */
+.project-impact-section {
+  margin-bottom: 80px;
+}
+
+.impact-grid {
+  display: grid;
+  gap: 40px;
+}
+
+.impact-card {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(16, 24, 40, 0.08);
+  align-items: center;
+}
+
+.impact-card:nth-child(even) {
+  grid-template-columns: 1fr 400px;
+  background: var(--brand-600);
+  color: #ffffff;
+}
+
+.impact-card:nth-child(even) .impact-image {
+  order: 2;
+}
+
+.impact-card:nth-child(even) .impact-content {
+  order: 1;
+}
+
+.impact-card:nth-child(even) h3 {
+  color: #ffffff;
+}
+
+.impact-card:nth-child(even) p {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.impact-card:nth-child(even) .read-more-link {
+  color: #ffd37c;
+}
+
+.impact-image {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.impact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.impact-content {
+  padding: 40px;
+}
+
+.impact-content h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 20px;
+}
+
+.impact-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+
+.read-more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--brand-600);
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.read-more-link:hover {
+  gap: 12px;
+}
+
+/* Impact Stats Section */
+.impact-stats-section {
+  margin-bottom: 80px;
+  background: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-800) 100%);
+  padding: 60px;
+  border-radius: 16px;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.stat-item {
+  text-align: center;
+  color: #ffffff;
+}
+
+.stat-number {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: #ffd37c;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+/* Event Section (for Snehapadam) */
+.project-event-section {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.event-header {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.event-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--brand-600);
+  margin: 0 0 16px;
+}
+
+.event-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Call to Action Section */
+.project-cta-section {
+  margin-bottom: 40px;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 60px 40px;
+  border-radius: 16px;
+  text-align: center;
+  border: 2px solid #e5e7eb;
+}
+
+.cta-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 16px;
+}
+
+.cta-text {
+  font-size: 18px;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+.cta-text strong {
+  color: var(--brand-600);
+}
+
+.cta-subtext {
+  font-size: 16px;
+  color: var(--muted);
+  margin: 0 0 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .project-detail-hero-title {
+    font-size: 42px;
+  }
+
+  .project-detail-hero-subtitle {
+    font-size: 18px;
+  }
+
+  .gallery-grid-detail {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-card {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-card:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-card:nth-child(even) .impact-image {
+    order: 1;
+  }
+
+  .impact-card:nth-child(even) .impact-content {
+    order: 2;
+  }
+
+  .impact-content {
+    padding: 30px;
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .project-detail-hero {
+    height: 280px;
+  }
+
+  .project-detail-hero-title {
+    font-size: 32px;
+  }
+
+  .project-detail-hero-subtitle {
+    font-size: 16px;
+  }
+
+  .project-detail-content-wrapper {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .project-gallery-section {
+    padding: 40px 20px;
+  }
+
+  .gallery-grid-detail {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .features-title {
+    font-size: 26px;
+  }
+
+  .feature-box {
+    padding: 30px 24px;
+  }
+
+  .impact-content {
+    padding: 24px;
+  }
+
+  .impact-content h3 {
+    font-size: 24px;
+  }
+
+  .impact-stats-section {
+    padding: 40px 24px;
+  }
+
+  .stat-number {
+    font-size: 36px;
+  }
+
+  .cta-box {
+    padding: 40px 24px;
+  }
+
+  .cta-title {
+    font-size: 28px;
+  }
+
+  .content-paragraph {
+    text-align: left;
+  }
+}
