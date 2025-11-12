@@ -37,8 +37,8 @@ export default function Hero(){
           <h1 className="title">{SLIDES[index].title}</h1>
           <p className="hero-subtitle">{SLIDES[index].subtitle}</p>
           <div className="cta-row">
-            <a className="btn btn-ghost" href="#">Discover Now</a>
-            <a className="btn btn-primary" href="#">Watch Video</a>
+            <a className="btn btn-ghost" href="#">Contact Now</a>
+            <a className="btn btn-primary" href="#">Act Now</a>
           </div>
         </div>
       </div>
